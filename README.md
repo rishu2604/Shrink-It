@@ -5,6 +5,13 @@ File compression and decompression using Huffman coding
 # Functions:
 # createArr():
 Initializes an array of 128 nodes, each representing a character with its frequency set to 0.
+Loop Iteration (128 times):
+    The for loop runs from i = 0 to i = 127 (128 times), covering all ASCII characters.
+Node Initialization:
+    For each iteration of the loop, a new Node object is created using the new operator.
+The pointer to this new node is added to the arr vector, which is a member variable of the huffman class.
+The data member of the node is set to the ASCII value represented by the loop variable i. This means the data member stores the actual character value (for example, when i is 65, arr[i]->data would be 'A' since the ASCII value of 'A' is 65).
+The freq member of the node is initialized to 0, indicating that the frequency of this character in the input data has not been counted yet.
 
 # traverse(Node *r, string str):
 Traverses the Huffman tree and assigns binary codes to leaf nodes (0 for left child, 1 for right child).
